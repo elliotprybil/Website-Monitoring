@@ -1,6 +1,8 @@
 # Website-Monitoring
 
-This is my project from the first year of my Bachelor's. The purpose here is to be notified as soon as a website will drop an item you are looking for. 
+Be among the first notified when a website drops an item you are looking for. 
+
+You can also use these scripts for other purposes such as medical appointments (e.g. VITE MA DOSE for Covid-19 Vaccines). 
 
 ## Sneakers.py
 
