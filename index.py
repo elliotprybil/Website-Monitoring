@@ -1,4 +1,5 @@
-#Kith + Proxies
+#Scrapper for Kith website with free proxies. Obviously better if you can use your own proxies. 
+#Linked to a discord channel. You just have to add your own link. 
 
 from random import choice
 import requests
@@ -17,7 +18,7 @@ def monitor():
     proxy = get_proxy()
     source = requests.get('https://eu.kith.com/collections/mens-footwear', proxies=proxy, timeout=5).text
     soup = BeautifulSoup(source, 'html.parser')
-    hook = Webhook("https://discord.com/api/webhooks/827091691789746226/svCuhgnjo8TZ2zJHRRZlM8fxCgNGifgKIscwd6kEf3k6XLzDNJGFRXkL3DksUg-xLtaN")
+    hook = Webhook("HERE ADD YOUR OWN WEBHOOK")
     for items in soup.find_all('li', class_='collection-product'):
         url = 'https://eu.kith.com' + items.a.get('href')
         image = 'https:' + items.img.get('src')
