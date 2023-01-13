@@ -11,7 +11,7 @@ def discord(title, brand, price, link, image):
                 af.write(link + '\n')
                 print(link)
                 hook = discord_brand(brand)
-                webhook = DiscordWebhook(url=hook, username="Elliot Prybil")
+                webhook = DiscordWebhook(url=hook, username="YOUR NAME")
                 embed = DiscordEmbed(description="**[" + title + "](" + link + ")**", color='ffffff')
                 embed.set_footer(text='CookGroup', icon_url='https://i.pinimg.com/originals/a2/00/d9/a200d9a45bfbca318084084d27ac2228.jpg')
                 embed.set_thumbnail(url=image)
@@ -28,7 +28,7 @@ def discord(title, brand, price, link, image):
 
 def discord(url, image, title, sizes):
 	if 'DUNK' in title or 'JORDAN' in title or 'YEEZY' in title:
-		filename = 'yoox.txt'
+		filename = 'FILENAME'
 	            with open(filename, 'r') as rf:
 	                with open(filename, 'a') as af:
 	                    read = rf.read()
@@ -37,8 +37,8 @@ def discord(url, image, title, sizes):
 	                        af.write(sizes + '\n')
 	                        print(url)
 						    true_sizes = sizes.replace(' ', '\n')
-						    hook = "https://discord.com/api/webhooks/837431328378191943/C9nNYzfaBBeTWIgCt2oC6mwkoEhk6VRTDml54YG6aIQapie20Vmc9LB_ZsdsUfkr4x5R"
-						    webhook = DiscordWebhook(url=hook, username="Elliot Prybil")
+						    hook = "WEBHOOK"
+						    webhook = DiscordWebhook(url=hook, username="YOUR NAME")
 						    embed = DiscordEmbed(description="**[" + title + "](" + url + ")**", color='ffffff')
 						    embed.set_footer(text='CookGroup', icon_url='https://i.pinimg.com/originals/a2/00/d9/a200d9a45bfbca318084084d27ac2228.jpg')
 						    embed.set_thumbnail(url=image)
