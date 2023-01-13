@@ -47,11 +47,11 @@ async function scrapeEbay () {
                     const hook = which_hook(brand);
                     console.log('good');
                     try {
-                        const data = fs.readFileSync('/Users/elliotprybil/Desktop/ebay/file.txt', 'utf8'); //Read File Datas
+                        const data = fs.readFileSync('FILE PATH', 'utf8'); //Read File Datas
                         if (!data.includes(title)) { 
                             try {
                                 discord_notifications(title, price, link, statut, image, brand, hook);
-                                fs.writeFile('/Users/elliotprybil/Desktop/ebay/file.txt', title + '\n', { flag: 'a+' }, err => {}); //New Item Wrote
+                                fs.writeFile('FILE PATH', title + '\n', { flag: 'a+' }, err => {}); //New Item Wrote
                             }   
                             catch (err) {
                                 console.error(err);
