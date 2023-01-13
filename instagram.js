@@ -5,7 +5,7 @@ import cheerio from 'cheerio';
 
 
 const response = await fetch(       
-    'https://www.instagram.com/noahbeck/feed/?__a=1', {
+    'https://www.instagram.com/' + "THE NAME OF THE PAGE YOUR ARE LOOKING TO SCRAP"+ '/feed/?__a=1', {
     headers: {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36"}
 });
 
@@ -32,13 +32,13 @@ for (let i in posts) {
         if (deeper.length != 0 ) {
             let support = post['node']['edge_media_to_caption']['edges'][0]['node']['text'];
             let text = support.substring(0, 250);
-            let hook = 'https://discord.com/api/webhooks/837431328378191943/C9nNYzfaBBeTWIgCt2oC6mwkoEhk6VRTDml54YG6aIQapie20Vmc9LB_ZsdsUfkr4x5R';
+            let hook = 'USE YOUR OWN WEBHOOK';
             discord_notifications(text, hook, image, profile, url);
         } else {
             console.log('No New Links');
         };
     } else {
-        console.log("Vidéo");
+        console.log("Video");
     };
 
 };
