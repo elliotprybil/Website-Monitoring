@@ -7,7 +7,7 @@ import threading
 def monitor():
 	source = requests.get('https://www.nike.com/launch/').text #, headers=RandomHeaders.LoadHeader()).text
 	soup = BeautifulSoup(source, 'html.parser')
-	webhook = 'https://discord.com/api/webhooks/825460407111254016/tIRDBjqwGoILC11XXEBXz0naoJvcZFymuUhPU0Zix5Thx-2ELIBGnviy1_Li8ikiclJq'
+	webhook = 'YOUR OWN WEBHOOK'
 	for hrefs in soup.find_all('figure', class_='pb2-sm va-sm-t ncss-col-sm-12 ncss-col-md-6 ncss-col-lg-4 pb4-md prl0-sm prl2-md ncss-col-sm-6 ncss-col-lg-3 pb4-md prl2-md pl1-md pr0-md'):
 		url = "https://www.nike.com" + hrefs.a.get('href')
 		filename = 'nikelinks.txt'
