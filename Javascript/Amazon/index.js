@@ -36,14 +36,14 @@ async function scrapeAmazon () {
             const url = list[2];
             const image = list[3];
             const brand = 'Pokemon';
-            const hook = 'https://discord.com/api/webhooks/837431328378191943/C9nNYzfaBBeTWIgCt2oC6mwkoEhk6VRTDml54YG6aIQapie20Vmc9LB_ZsdsUfkr4x5R';
+            const hook = 'YOUR OWN WEBHOOK';
             if (title != 'null' && discord_price != 'null€' && url != 'null' && image != 'null') {
                 try {
                     const data = fs.readFileSync('/Users/elliotprybil/Desktop/BEmonitoring/Amazon/file.txt', 'utf8'); //Read File Datas
                     if (!data.includes(title)) { 
                         try {
                             discord_notifications(title, discord_price, image, url, brand, hook);
-                            fs.writeFile('/Users/elliotprybil/Desktop/BEmonitoring/Amazon/file.txt', title + '\n', { flag: 'a+' }, err => {}); //New Item Wrote
+                            fs.writeFile('FILE PATH', title + '\n', { flag: 'a+' }, err => {}); //New Item Wrote
                         } 
                           catch (err) {
                             console.error(err);
