@@ -21,7 +21,7 @@ export function discord_notifications(title, price, link, statut, image, brand, 
             
 
     webhookClient.send({
-        username: 'KingHellium',
+        username: 'YOUR USERNAME',
         avatarURL: 'https://img.icons8.com/cotton/2x/kiwi--v2.png',
         embeds: [embed],
     });
